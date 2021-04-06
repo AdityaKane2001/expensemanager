@@ -1,5 +1,6 @@
 <?php
 session_start();
+<<<<<<< HEAD
 require_once 'pdo.php';
 $_SESSION['token'] = '1751648833:AAGwoBQhbU6TXvLcfGX-EP6Yvk6CYXyF9Vw';
 $_SESSION['ak_telegram_id']=1237164334;
@@ -70,5 +71,15 @@ function commit($transaction_arr){
 
 echo(get_last_message());
 //echo(send_message('Thank you for using Expense Manager.'));
+=======
+//require_once 'pdo.php';
+$HTTP_TOKEN = '1751648833:AAGwoBQhbU6TXvLcfGX-EP6Yvk6CYXyF9Vw';
+
+$url='https://api.telegram.org/bot1751648833:AAGwoBQhbU6TXvLcfGX-EP6Yvk6CYXyF9Vw/getUpdates';
+$site = file_get_contents($url);
+echo($site);
+echo("<br><br><br>");
+var_dump(json_decode($site,true));
+>>>>>>> 32ce4c8d8146f738befae56ad6616a1c1ea6d0f9
 
  ?>
